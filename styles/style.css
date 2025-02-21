@@ -15,47 +15,69 @@
     font-style: normal;
 }
 
+/*############ General ############*/
 body {
     font-family: 'InconsolataNerdFont', sans-serif;
     background-color: var(--bg);
     color: var(--text);
     width: 50em;
     margin: 0 auto;
+
+    a {
+        color: var(--link);
+        text-decoration: none;
+    }
+    
+    hr {
+        border: 0.1em solid;
+        border-color: var(--border);
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 }
 
 /*############ Header ############*/
 header {
     background-color: var(--header-bg);
-    padding: 20px;
+    padding: 1em;
+    height: 80px; /*Trouver une solution plus adaptive pour réduire les 6 pixels de trop*/
 
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
+    .inline-style {
+        height: 33px;
+        margin-bottom: 20px;
+    }
 
-        li {
-            margin-right: 20px;
-    
-            a {
+    nav {
+        margin-bottom: 1em;
+        ul { /*List navbar*/
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            a { /*navbar buttons*/
                 text-decoration: none;
                 color: var(--link);
+                margin-right: 1em;
+                padding: 0.5em;
+            }
+
+            a:hover {
+                color: #32290b;
+                background-color: var(--link);
             }
         }
     }
-
 }
 
 /*############ Big sections ############*/
-#main-id, footer, header {
+.main-class, footer, header {
     padding: 1em;
     margin: 1em;
-    border: 1px solid black;
-    border-radius: 8px;
 }
 
 /*############ Main content ############*/
-#main-id {
+.main-class {
     background-color: var(--main-bg);
 }
 
@@ -71,5 +93,39 @@ footer {
 
     ul li {
         list-style-type: none;
+    }
+}
+
+/*############ Now ############*/
+#now-id {
+    ul li {
+        margin-bottom: 1em; 
+    }
+}
+
+/*############ Styles ############*/
+.border-style {
+    border: 0.15em solid;
+    border-radius: 8px;
+    border-color: var(--border);
+}
+
+.inline-style {
+    display: flex;
+    align-items: center;
+
+    a {
+        margin-right: 1em;
+    }
+}
+
+.quote-style {
+    border: 0.10em solid;
+    border-radius: 8px;
+    border-color: var(--border); /*Changer couleur*/
+    padding: 1em;
+
+    p {
+        margin: 0px;;
     }
 }
